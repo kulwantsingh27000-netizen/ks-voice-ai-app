@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KS Voice AI</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#07152f;
+  color:white;
+}
+
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 6%;
+  background:#081a3b;
+  border-bottom:1px solid #203967;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:bold;
+  color:#20cfff;
+}
+
+.logo span{
+  color:#b66cff;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 22px;
+  border-radius:10px;
+  background:linear-gradient(90deg,#1677ff,#a832ff);
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  border:0;
+  cursor:pointer;
+}
+
+.hero{
+  padding:70px 7%;
+  text-align:center;
+  background:radial-gradient(circle at top,#163c75,#07152f 65%);
+}
+
+.hero h1{
+  font-size:48px;
+  margin-bottom:15px;
+}
+
+.hero h1 span{
+  color:#20cfff;
+}
+
+.hero p{
+  font-size:20px;
+  color:#d2d9e8;
+  margin-bottom:25px;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.features{
+  padding:35px 6%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+}
+
+.card{
+  background:#10264d;
+  padding:25px 15px;
+  border-radius:18px;
+  text-align:center;
+  border:1px solid #23406e;
+}
+
+.icon{
+  font-size:38px;
+  margin-bottom:12px;
+}
+
+.card h3{
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#b9c5d8;
+  font-size:14px;
+}
+
+.generator{
+  max-width:900px;
+  margin:20px auto;
+  padding:25px;
+  background:#0d2246;
+  border-radius:20px;
+}
+
+.generator h2{
+  margin-bottom:18px;
+}
+
+textarea{
+  width:100%;
+  min-height:150px;
+  border:0;
+  border-radius:12px;
+  padding:15px;
+  font-size:17px;
+  resize:vertical;
+}
+
+.controls{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:12px;
+  margin:15px 0;
+}
+
+select{
+  padding:13px;
+  border-radius:10px;
+  border:0;
+  font-size:15px;
+}
+
+.generate{
+  width:100%;
+  padding:16px;
+  border:0;
+  border-radius:12px;
+  background:linear-gradient(90deg,#087cff,#a52cff);
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.tools{
+  padding:40px 6%;
+}
+
+.tools h2{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.tool-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+}
+
+.pricing{
+  padding:40px 6%;
+  background:#061329;
+}
+
+.pricing h2{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.price-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  max-width:900px;
+  margin:auto;
+}
+
+.price{
+  background:#10264d;
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  border:1px solid #294673;
+}
+
+.price h3{
+  font-size:22px;
+}
+
+.amount{
+  font-size:36px;
+  margin:15px;
+  color:#20cfff;
+}
+
+.price li{
+  list-style:none;
+  margin:10px 0;
+  color:#d4dcec;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#aebbd0;
+  background:#040d1d;
+}
+
+@media(max-width:600px){
+  header{
+    padding:15px;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .hero{
+    padding:50px 18px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🎙️ KS <span>Voice AI</span></div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#tools">Tools</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#">Login</a>
+  </nav>
+
+  <a href="#" class="btn">Sign Up</a>
+</header>
+
+<section class="hero" id="home">
+  <h1>Convert Text to <span>Realistic Voice</span></h1>
+
+  <p>
+    Punjabi • Hindi • English • Voice Clone • AI Tools
+  </p>
+
+  <div class="hero-buttons">
+    <a href="#generator" class="btn">Get Started Free 🚀</a>
+    <a href="#tools" class="btn">Explore Tools</a>
+  </div>
+</section>
+
+<section class="features">
+
+  <div class="card">
+    <div class="icon">🎙️</div>
+    <h3>Text to Speech</h3>
+    <p>Convert text into natural voice.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">👤</div>
+    <h3>Voice Clone</h3>
+    <p>Create your own AI voice.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎬</div>
+    <h3>Voice to Video</h3>
+    <p>Create videos with AI voice.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">🌐</div>
+    <h3>Multi Language</h3>
+    <p>Punjabi, Hindi & English.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">📥</div>
+    <h3>MP3 Download</h3>
+    <p>Download generated audio.</p>
+  </div>
+
+</section>
+
+<section class="generator" id="generator">
+
+  <h2>🎙️ Try KS Voice AI</h2>
+
+  <textarea id="text"
+  placeholder="ਇੱਥੇ ਆਪਣਾ text ਲਿਖੋ..."></textarea>
+
+  <div class="controls">
+
+    <select id="language">
+      <option>Punjabi</option>
+      <option>Hindi</option>
+      <option>English</option>
+    </select>
+
+    <select id="voice">
+      <option>KS My Voice</option>
+      <option>Male Voice</option>
+      <option>Female Voice</option>
+    </select>
+
+    <select id="emotion">
+      <option>Normal</option>
+      <option>Happy</option>
+      <option>Sad</option>
+      <option>News</option>
+      <option>Story</option>
+    </select>
+
+    <select id="speed">
+      <option>1.0x Speed</option>
+      <option>0.8x Speed</option>
+      <option>1.2x Speed</option>
+      <option>1.5x Speed</option>
+    </select>
+
+  </div>
+
+  <button class="generate" onclick="generateVoice()">
+    🎙️ Generate Voice
+  </button>
+
+  <div id="result" style="margin-top:20px;"></div>
+
+</section>
+
+<section class="tools" id="tools">
+
+  <h2>✨ More AI Tools</h2>
+
+  <div class="tool-grid">
+
+    <div class="card">
+      <div class="icon">🎤</div>
+      <h3>Voice Clone</h3>
+      <p>Clone your own voice.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎬</div>
+      <h3>Text to Video</h3>
+      <p>Create AI videos.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📝</div>
+      <h3>AI Script Writer</h3>
+      <p>Create scripts for videos.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">▶️</div>
+      <h3>YouTube Tools</h3>
+      <p>Title, description & tags.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎵</div>
+      <h3>Audio Editor</h3>
+      <p>Edit your audio.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌍</div>
+      <h3>AI Translate</h3>
+      <p>Translate Punjabi, Hindi & English.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="pricing" id="pricing">
+
+  <h2>💰 Plans</h2>
+
+  <div class="price-grid">
+
+    <div class="price">
+      <h3>Free</h3>
+      <div class="amount">₹0</div>
+      <ul>
+        <li>✓ Free Credits</li>
+        <li>✓ Basic Voices</li>
+        <li>✓ Standard Quality</li>
+      </ul>
+      <br>
+      <a class="btn" href="#">Get Free</a>
+    </div>
+
+    <div class="price">
+      <h3>Basic</h3>
+      <div class="amount">₹49</div>
+      <ul>
+        <li>✓ More Credits</li>
+        <li>✓ More Voices</li>
+        <li>✓ High Quality</li>
+      </ul>
+      <br>
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+
+    <div class="price">
+      <h3>Pro</h3>
+      <div class="amount">₹99</div>
+      <ul>
+        <li>✓ Large Credits</li>
+        <li>✓ Voice Clone</li>
+        <li>✓ Premium Quality</li>
+      </ul>
+      <br>
+      <a class="btn" href="#">Buy Now</a>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 KS Voice AI — All Rights Reserved
+</footer>
+
+<script>
+
+function generateVoice(){
+
+  const text =
+    document.getElementById("text").value.trim();
+
+  const result =
+    document.getElementById("result");
+
+  if(!text){
+
+    result.innerHTML =
+      "⚠️ ਪਹਿਲਾਂ ਆਪਣਾ text ਲਿਖੋ।";
+
+    return;
+  }
+
+  result.innerHTML =
+    "⏳ Voice generation system ਤਿਆਰ ਹੋ ਰਿਹਾ ਹੈ...";
+
+}
+
+</script>
+
+</body>
+  </html>
