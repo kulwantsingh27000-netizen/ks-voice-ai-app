@@ -479,3 +479,35 @@ function generateVoice(){
 
 </body>
   </html>
+function generateVoice(){
+
+  const text = document.getElementById("text").value.trim();
+  const result = document.getElementById("result");
+
+  if(!text){
+    result.innerHTML = "⚠️ ਪਹਿਲਾਂ ਆਪਣਾ text ਲਿਖੋ";
+    return;
+  }
+
+  speechSynthesis.cancel();
+
+  const voice = new SpeechSynthesisUtterance(text);
+
+  voice.lang = "pa-IN";
+  voice.rate = 1.0;
+  voice.pitch = 1.0;
+
+  voice.onstart = function(){
+    result.innerHTML = "🎙️ Voice ਚੱਲ ਰਹੀ ਹੈ...";
+  };
+
+  voice.onend = function(){
+    result.innerHTML = "✅ Voice ਤਿਆਰ ਹੈ";
+  };
+
+  voice.onerror = function(){
+    result.innerHTML = "❌ Voice ਚਲਾਉਣ ਵਿੱਚ ਸਮੱਸਿਆ ਆਈ";
+  };
+
+  speechSynthesis.speak(voice);
+}
